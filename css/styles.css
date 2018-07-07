@@ -313,7 +313,8 @@ nav h1 a {
 		height: 250px;
 	}
 	nav h1 a {
-	 font-size: 10pt;
-	 color: black;
+	 font-size: 14pt;
+	 letter-spacing: 6px;
+	 font-weight: bold;
 	}
 }
