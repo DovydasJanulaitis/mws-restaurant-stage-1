@@ -350,4 +350,13 @@ nav h1 a {
 		padding: 10px 40px 16px;
 		width: 100%;
 	}
+	#restaurant-name {
+		font-size: 15pt;
+	}
+	#reviews-container {
+		width: 100%;
+	}
+	#reviews-list li {
+		width: 90%;
+	}
 }
