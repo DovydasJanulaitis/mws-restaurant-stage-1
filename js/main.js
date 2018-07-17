@@ -1,4 +1,14 @@
 /*jshint esversion: 6 */
+// Set up Service Worker
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('../serviceworker.js')
+    .then(function(registration) {
+      console.log("Registration is a success");
+    })
+    .catch(function(err) {
+      console.log('Service Worker Failed to Register');
+    });
+}
 
 let restaurants,
   neighborhoods,
