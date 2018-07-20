@@ -1,32 +1,26 @@
-# Mobile Web Specialist Certification Course
+# Udacity Front-End Web Developer Nanodegree Project
 ---
-#### _Three Stage Course Material Project - Restaurant Reviews_
+#### _ Restaurant Reviews App – Stage 1
 
-## Project Overview: Stage 1
+## Description
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+This is a simple app that allows user to see a list of pre-selected restaurants located in Lower Manhattan. The app also displays location of all restaurants in an interactive map and allows to see additional details of each restaurant: working hours, exact location on the map and comments.
 
-### Specification
+Additional features:
+•	App is fully responsive in all viewport sizes
+•	Site can be accessed offline after the first visit
+•	Site is accessible and can be used with assistive technology
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+### Launching the App
 
-### What do I do from here?
+To launch the app on your machine, take the following steps:
+1.	Copy the repository to your local machine using command: `$ git clone https://github.com/DovydasJanulaitis/mws-restaurant-stage-1.git`
+2.	Open the cloned project folder and start a simple HTTP server on your machine to launch the app. To launch HTTP server, I recommend using Python that has simple tools to do this:
+a.	Download and install Python on your machine. You can download Python by clicking this link. If you already have Python, skip to the next step
+b.	Open the terminal and check which version of Python you have installed by running `$ python -V`
+c.	If you have Python 2.x start the server by typing `python -m SimpleHTTPServer 8000`. If you have Python 3.x, start the server by typing `python -m http.server 8000` (you don’t have to use port 8000, any other port works as well)
+d.	With your server running, open your default browser and visit ` http://localhost:8000`. You should see the app running
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
+### Resources
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
-
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
-
-## Leaflet.js and Mapbox:
-
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
-
-### Note about ES6
-
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
-
-
-
+This app is using free map API version from www.mapbox.com. Check it out!

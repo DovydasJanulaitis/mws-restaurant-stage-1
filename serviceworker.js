@@ -41,7 +41,7 @@ self.addEventListener('activate', function(e) {
   e.waitUntil(caches.keys().then(function(cacheNames) {
     return Promise.all(cacheNames.map(function(thisCache) {
       if(thisCache !== cacheName) {
-        console.log('[ServiceWorker] Removing old cached files')
+        console.log('[ServiceWorker] Removing old cached files');
       }
     }));
   }));
@@ -50,6 +50,7 @@ self.addEventListener('activate', function(e) {
 self.addEventListener('fetch', function(e) {
   console.log('[ServiceWorker] Fetching', e.request.url);
 
+// if cache
   e.respondWith(caches.match(e.request).then(function(response){
     if(response) {
       console.log('ServiceWorker Found in Cache', e.request.url);
