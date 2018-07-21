@@ -1,6 +1,8 @@
 /*jshint esversion: 6 */
 
 const cacheName = 'v2';
+
+// list of files to be cached
 const cacheFiles = [
   './',
   './index.html',
@@ -37,7 +39,7 @@ self.addEventListener('install', function(e) {
 self.addEventListener('activate', function(e) {
   console.log('[ServiceWorker] Activated');
 
-// loop through the caches and remove old cached files
+// loop through the cache and remove old cached files
   e.waitUntil(caches.keys().then(function(cacheNames) {
     return Promise.all(cacheNames.map(function(thisCache) {
       if(thisCache !== cacheName) {
@@ -47,10 +49,11 @@ self.addEventListener('activate', function(e) {
   }));
 });
 
+
 self.addEventListener('fetch', function(e) {
   console.log('[ServiceWorker] Fetching', e.request.url);
 
-// if cache
+// if the requested url is already cached, return it. If not, fetch the url
   e.respondWith(caches.match(e.request).then(function(response){
     if(response) {
       console.log('ServiceWorker Found in Cache', e.request.url);
@@ -59,6 +62,4 @@ self.addEventListener('fetch', function(e) {
 
     return fetch(e.request);
   }));
-
-
 });
