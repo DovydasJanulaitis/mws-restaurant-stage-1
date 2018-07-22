@@ -322,6 +322,9 @@ nav h1 a {
 	#restaurants-list li {
 		width: 85%;
 	}
+	#map-container {
+		height: 250px;
+	}
 	#map {
 		height: 250px;
 	}
